@@ -1,0 +1,656 @@
+
+/* ====================================
+   PATIENT JOURNEY SECTION
+==================================== */
+
+.pj-section,
+.pj-section * {
+  box-sizing: border-box;
+}
+
+.pj-section {
+  width: 100%;
+  padding: 45px 24px 60px;
+
+  font-family: "Inter", sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #edf9fd 0%,
+      #f6fcff 35%,
+      #ffffff 70%
+    );
+
+  overflow: hidden;
+}
+
+.pj-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ====================================
+   SECTION HEADINGS
+==================================== */
+
+.pj-section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pj-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 9px;
+
+  color: #009fa9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.pj-eyebrow-line {
+  width: 28px;
+  height: 2px;
+  border-radius: 10px;
+  background: #02adba;
+}
+
+.pj-section-heading h2 {
+  margin: 0;
+
+  color: #092c51;
+  font-size: clamp(26px, 2.7vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.pj-section-heading p {
+  margin: 9px auto 0;
+  max-width: 650px;
+
+  color: #61788e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ====================================
+   FOUR PROCESS STEPS
+==================================== */
+
+.pj-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+
+  margin: 35px 0 38px;
+}
+
+.pj-step {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  animation: pjFadeUp 0.7s ease both;
+  animation-delay: var(--step-delay);
+}
+
+/* Circular Icon */
+
+.pj-step-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #05bac6,
+    #008f99
+  );
+
+  color: white;
+  border-radius: 50%;
+
+  box-shadow: 0 6px 18px rgba(0, 159, 169, 0.13);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pj-step:hover .pj-step-icon {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 159, 169, 0.22);
+}
+
+/* Step Heading */
+
+.pj-step h3 {
+  margin: 14px 0 6px;
+
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #092c51;
+}
+
+/* Step Description */
+
+.pj-step p {
+  max-width: 210px;
+  margin: 0;
+
+  color: #61778c;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Arrow between steps */
+
+.pj-step-arrow {
+  flex: 0 0 38px;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 30px;
+  color: #0b4774;
+}
+
+.pj-step-arrow svg {
+  stroke-width: 2.3px;
+}
+
+/* ====================================
+   CTA BANNER
+==================================== */
+
+.pj-cta-banner {
+  display: grid;
+  grid-template-columns: 40% minmax(0, 60%);
+
+  min-height: 205px;
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    105deg,
+    #08bac7 0%,
+    #009ba8 53%,
+    #007e8e 100%
+  );
+
+  box-shadow: 0 8px 25px rgba(0, 128, 148, 0.08);
+}
+
+/* Image */
+
+.pj-cta-image {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.pj-cta-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent 50%,
+    #069eac 100%
+  );
+
+  pointer-events: none;
+}
+
+.pj-cta-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+.pj-cta-banner:hover .pj-cta-image img {
+  transform: scale(1.04);
+}
+
+/* Banner Content */
+
+.pj-cta-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 28px 35px 28px 15px;
+}
+
+.pj-cta-content h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+  font-size: clamp(23px, 2.5vw, 33px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.pj-cta-content p {
+  max-width: 590px;
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* CTA Button */
+
+.pj-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 43px;
+  padding: 11px 24px;
+
+  background: #ffffff;
+  color: #092c51;
+
+  border-radius: 30px;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.pj-cta-button:hover {
+  background: #f1fcfd;
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 20px rgba(0, 36, 55, 0.16);
+}
+
+.pj-cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.pj-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* ====================================
+   PATIENT EXPERIENCES
+==================================== */
+
+.pj-testimonials-section {
+  padding-top: 40px;
+}
+
+.pj-testimonials-heading {
+  margin-bottom: 25px;
+}
+
+.pj-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Review Card */
+
+.pj-testimonial-card {
+  position: relative;
+  min-width: 0;
+  min-height: 215px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 25px 22px 55px;
+
+  background: #ffffff;
+  border: 1px solid #dce7ef;
+  border-radius: 13px;
+
+  box-shadow: 0 4px 12px rgba(9, 44, 81, 0.035);
+
+  animation: pjFadeUp 0.65s ease both;
+  animation-delay: var(--review-delay);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pj-testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: #bbe4e8;
+
+  box-shadow: 0 12px 25px rgba(9, 44, 81, 0.08);
+}
+
+/* Quote Icon */
+
+.pj-quote-icon {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+
+  color: #009fa9;
+}
+
+/* Review Text */
+
+.pj-testimonial-text {
+  flex: 1;
+
+  margin: 0 0 23px;
+
+  color: #40576d;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Patient Information */
+
+.pj-patient-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pj-patient-info img,
+.pj-patient-avatar {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.pj-patient-info img {
+  object-fit: cover;
+}
+
+.pj-patient-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5f7f8;
+  color: #008f99;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.pj-patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pj-patient-details strong {
+  color: #092c51;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pj-patient-details > span {
+  color: #587186;
+  font-size: 12px;
+}
+
+/* ====================================
+   ENTRANCE ANIMATION
+==================================== */
+
+@keyframes pjFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media (max-width: 1000px) {
+  .pj-step h3 {
+    font-size: 15px;
+  }
+
+  .pj-step p {
+    font-size: 12px;
+  }
+
+  .pj-step-arrow {
+    flex-basis: 20px;
+  }
+
+  .pj-cta-banner {
+    grid-template-columns: 35% 65%;
+  }
+
+  .pj-cta-content {
+    padding: 25px 22px;
+  }
+
+  .pj-testimonials-grid {
+    gap: 12px;
+  }
+
+  .pj-testimonial-card {
+    padding: 20px 15px 20px 42px;
+  }
+
+  .pj-quote-icon {
+    left: 13px;
+  }
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media (max-width: 700px) {
+  .pj-section {
+    padding: 45px 15px 50px;
+  }
+
+  .pj-section-heading h2 {
+    font-size: 27px;
+  }
+
+  .pj-section-heading p {
+    font-size: 12px;
+  }
+
+  /* Vertical journey */
+
+  .pj-steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    margin: 30px 0;
+  }
+
+  .pj-step {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    column-gap: 17px;
+    text-align: left;
+  }
+
+  .pj-step-icon {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+  }
+
+  .pj-step-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .pj-step h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .pj-step p {
+    width: 100%;
+    max-width: none;
+
+    margin: 5px 0 0 71px;
+    font-size: 12px;
+  }
+
+  .pj-step-arrow {
+    flex: none;
+    justify-content: flex-start;
+
+    height: 35px;
+    padding: 6px 0 6px 17px;
+  }
+
+  .pj-step-arrow svg {
+    transform: rotate(90deg);
+  }
+
+  /* CTA banner */
+
+  .pj-cta-banner {
+    grid-template-columns: 1fr;
+    border-radius: 13px;
+  }
+
+  .pj-cta-image {
+    height: 190px;
+  }
+
+  .pj-cta-image::after {
+    background: linear-gradient(
+      180deg,
+      transparent 65%,
+      #059eaa 100%
+    );
+  }
+
+  .pj-cta-content {
+    padding: 23px 22px 26px;
+  }
+
+  .pj-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .pj-cta-content p {
+    font-size: 13px;
+  }
+
+  /* Testimonials */
+
+  .pj-testimonials-section {
+    padding-top: 38px;
+  }
+
+  .pj-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pj-testimonial-card {
+    min-height: 175px;
+    padding: 20px 18px 20px 50px;
+  }
+
+  .pj-quote-icon {
+    left: 16px;
+  }
+}
+
+/* ====================================
+   SMALL MOBILE
+==================================== */
+
+@media (max-width: 380px) {
+  .pj-section-heading h2 {
+    font-size: 24px;
+  }
+
+  .pj-cta-content h2 {
+    font-size: 23px;
+  }
+
+  .pj-cta-button {
+    width: 100%;
+    font-size: 12px;
+    padding: 11px;
+  }
+}
+
+/* ====================================
+   ACCESSIBILITY
+==================================== */
+
+.pj-cta-button:focus-visible {
+  outline: 3px solid #092c51;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pj-step,
+  .pj-testimonial-card {
+    animation: none;
+    transition: none;
+  }
+
+  .pj-step-icon,
+  .pj-cta-image img,
+  .pj-cta-button,
+  .pj-cta-button svg {
+    transition: none;
+  }
+}

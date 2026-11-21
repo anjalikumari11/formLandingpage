@@ -1,0 +1,188 @@
+
+.hospital-brands-section {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #eef9fc 0%,
+    #f7fcfd 50%,
+    #eaf7fb 100%
+  );
+  overflow: hidden;
+  border-bottom: 1px solid #e3edf2;
+}
+
+.hospital-brands-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 105px;
+  padding: 15px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* HEADING */
+
+.hospital-brands-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.hospital-brands-heading span {
+  color: #009fa9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hospital-brands-heading strong {
+  color: #092c51;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* DIVIDER */
+
+.hospital-brands-divider {
+  width: 1px;
+  height: 45px;
+  background: #a6c8d7;
+  flex-shrink: 0;
+}
+
+/* SWIPER */
+
+.hospital-brands-slider {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hospital-logo-swiper {
+  width: 100%;
+  padding: 8px 0;
+}
+
+/* IMPORTANT:
+   Ensures constant movement rather
+   than stopping at each slide.
+*/
+
+.hospital-logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+
+.hospital-logo-swiper .swiper-slide {
+  width: 170px !important;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGO CARD */
+
+.hospital-logo-card {
+  width: 100%;
+  min-height: 72px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  transition: transform 0.3s ease;
+}
+
+.hospital-logo-card img {
+  width: 130px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+}
+
+.hospital-logo-card span {
+  color: #244560;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.hospital-logo-card:hover {
+  transform: scale(1.06);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .hospital-brands-container {
+    padding: 12px 20px;
+    min-height: 90px;
+    gap: 16px;
+  }
+
+  .hospital-logo-swiper .swiper-slide {
+    width: 145px !important;
+  }
+
+  .hospital-logo-card img {
+    width: 112px;
+    height: 40px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .hospital-brands-container {
+    padding: 10px 12px;
+    min-height: 80px;
+    gap: 12px;
+  }
+
+  .hospital-brands-heading span {
+    font-size: 8px;
+  }
+
+  .hospital-brands-heading strong {
+    font-size: 11px;
+  }
+
+  .hospital-brands-divider {
+    height: 35px;
+  }
+
+  .hospital-logo-swiper .swiper-slide {
+    width: 125px !important;
+  }
+
+  .hospital-logo-card {
+    min-height: 60px;
+    gap: 4px;
+  }
+
+  .hospital-logo-card img {
+    width: 100px;
+    height: 35px;
+  }
+
+  .hospital-logo-card span {
+    font-size: 9px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .hospital-logo-swiper .swiper-wrapper {
+    transition-duration: 0ms !important;
+  }
+}

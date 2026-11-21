@@ -1,0 +1,455 @@
+
+/* ==================================
+   WHY PATIENTS CHOOSE US
+================================== */
+
+.why-care-section,
+.why-care-section * {
+  box-sizing: border-box;
+}
+
+.why-care-section {
+  width: 100%;
+  background: linear-gradient(
+    110deg,
+    #f1faff 0%,
+    #f5fbff 50%,
+    #eaf7fd 100%
+  );
+
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.why-care-container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 310px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 33% minmax(0, 67%);
+  align-items: stretch;
+}
+
+/* ==================================
+   LEFT IMAGE
+================================== */
+
+.why-care-image-column {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.why-care-image-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  overflow: hidden;
+
+  border-radius: 0 95px 95px 0;
+}
+
+.why-care-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+.why-care-image-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* ==================================
+   RIGHT CONTENT
+================================== */
+
+.why-care-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 27px 35px 32px 30px;
+}
+
+/* EYEBROW */
+
+.why-care-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  color: #009fab;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.why-care-eyebrow span {
+  width: 25px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #00acb8;
+}
+
+/* TITLE */
+
+.why-care-content h2 {
+  margin: 0 0 23px;
+
+  color: #092c51;
+  font-size: clamp(23px, 2.4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.9px;
+  line-height: 1.17;
+}
+
+/* ==================================
+   BENEFIT CARDS
+================================== */
+
+.why-care-benefits {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.why-care-benefit {
+  min-width: 0;
+  min-height: 138px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 14px 7px 12px;
+
+  background: rgba(255, 255, 255, 0.87);
+  border: 1px solid #e2edf3;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(8, 48, 85, 0.035);
+
+  animation: whyCareReveal 0.65s ease both;
+  animation-delay: var(--delay);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.why-care-benefit:hover {
+  transform: translateY(-5px);
+  border-color: #b5e5e8;
+  box-shadow: 0 12px 24px rgba(8, 48, 85, 0.09);
+}
+
+/* ICON */
+
+.why-care-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 35px;
+  margin-bottom: 11px;
+
+  color: #00a6b1;
+}
+
+/* CARD TITLE */
+
+.why-care-benefit h3 {
+  margin: 0 0 6px;
+
+  color: #0a2c50;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  overflow-wrap: break-word;
+}
+
+/* DESCRIPTION */
+
+.why-care-benefit p {
+  margin: 0;
+
+  color: #647a8a;
+  font-size: 9.5px;
+  font-weight: 450;
+  line-height: 1.45;
+}
+
+/* ==================================
+   ANIMATIONS
+================================== */
+
+@keyframes whyCareReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================
+   MEDIUM DESKTOP
+================================== */
+
+@media (max-width: 1250px) {
+  .why-care-container {
+    grid-template-columns: 30% minmax(0, 70%);
+  }
+
+  .why-care-content {
+    padding: 25px 20px;
+  }
+
+  .why-care-benefits {
+    gap: 7px;
+  }
+
+  .why-care-benefit {
+    padding: 12px 5px;
+  }
+
+  .why-care-benefit h3 {
+    font-size: 10px;
+  }
+
+  .why-care-benefit p {
+    font-size: 9px;
+  }
+}
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 1050px) {
+  .why-care-container {
+    grid-template-columns: 35% minmax(0, 65%);
+  }
+
+  .why-care-content h2 {
+    font-size: 26px;
+  }
+
+  .why-care-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .why-care-benefit {
+    min-height: 120px;
+  }
+
+  .why-care-benefit h3 {
+    font-size: 11px;
+  }
+
+  .why-care-benefit p {
+    font-size: 10px;
+  }
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 700px) {
+  .why-care-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-care-image-wrapper {
+    height: 240px;
+    min-height: 0;
+    border-radius: 0 0 55px 55px;
+  }
+
+  .why-care-content {
+    padding: 30px 17px 38px;
+  }
+
+  .why-care-content h2 {
+    font-size: 27px;
+    margin-bottom: 24px;
+  }
+
+  .why-care-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .why-care-benefit {
+    min-height: 140px;
+    padding: 16px 10px;
+  }
+
+  .why-care-benefit-icon {
+    margin-bottom: 10px;
+  }
+
+  .why-care-benefit h3 {
+    font-size: 12px;
+  }
+
+  .why-care-benefit p {
+    font-size: 10.5px;
+  }
+}
+
+/* ==================================
+   SMALL MOBILE
+================================== */
+
+@media (max-width: 380px) {
+  .why-care-content h2 {
+    font-size: 24px;
+  }
+
+  .why-care-benefits {
+    gap: 8px;
+  }
+
+  .why-care-benefit {
+    padding: 13px 7px;
+  }
+
+  .why-care-benefit h3 {
+    font-size: 11px;
+  }
+}
+
+/* ==================================
+   REDUCED MOTION
+================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .why-care-benefit {
+    animation: none;
+    transition: none;
+  }
+
+  .why-care-image-wrapper img {
+    transition: none;
+  }
+}
+/* ===================================
+   INTRODUCTION
+=================================== */
+
+.why-care-intro {
+  max-width: 760px;
+
+  margin:
+    14px 0 26px;
+
+  color: #53677a;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ===================================
+   SUPPORT HEADING
+=================================== */
+
+.why-care-support-heading {
+  margin:
+    0 0 20px;
+
+  color: #0b365f;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+/* ===================================
+   DISCLAIMER
+=================================== */
+
+.why-care-disclaimer {
+  margin-top: 26px;
+
+  padding:
+    18px 20px;
+
+  border-left:
+    4px solid #0baebb;
+
+  border-radius: 8px;
+
+  background:
+    rgba(10, 174, 187, 0.07);
+}
+
+.why-care-disclaimer strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0b365f;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.why-care-disclaimer p {
+  margin: 0;
+
+  color: #53677a;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+
+  .why-care-intro {
+    margin-bottom: 22px;
+
+    font-size: 15px;
+  }
+
+  .why-care-support-heading {
+    font-size: 20px;
+  }
+
+  .why-care-disclaimer {
+    padding: 16px;
+  }
+
+  .why-care-disclaimer p {
+    font-size: 13px;
+  }
+}

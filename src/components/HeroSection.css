@@ -1,0 +1,878 @@
+
+/* ===================================
+   GLOBAL HERO SETTINGS
+=================================== */
+
+.surgery-hero,
+.surgery-hero * {
+  box-sizing: border-box;
+}
+
+.surgery-hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px 24px 35px;
+
+  background:
+    radial-gradient(
+      circle at 30% 90%,
+      rgba(0, 190, 205, 0.12),
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #f9fdff 0%,
+      #eef9fc 100%
+    );
+
+  font-family: "Inter", sans-serif;
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.surgery-hero-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: start;
+  gap: clamp(25px, 3.5vw, 55px);
+}
+
+/* ===================================
+   LEFT SECTION
+=================================== */
+
+.surgery-hero-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 14px 0;
+}
+
+.surgery-hero-content {
+  width: 100%;
+}
+
+.surgery-hero-eyebrow {
+  color: #00a5b3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.surgery-hero-title {
+  margin: 0;
+
+  color: #0c3158;
+  font-size: clamp(34px, 3.7vw, 54px);
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+  line-height: 1.13;
+}
+
+.surgery-hero-title span {
+  display: block;
+}
+
+.surgery-title-line {
+  width: 65px;
+  height: 4px;
+  margin-top: 22px;
+  border-radius: 10px;
+  background: #00aab7;
+}
+
+.surgery-hero-description {
+  max-width: 550px;
+  margin: 19px 0 0;
+
+  color: #5c7790;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ===================================
+   ADDITIONAL LEFT CONTENT
+=================================== */
+
+.surgery-hero-extra {
+  margin-top: 32px;
+  max-width: 550px;
+}
+
+.surgery-hero-extra h2 {
+  margin: 0 0 12px;
+
+  color: #113a5d;
+  font-size: clamp(21px, 2.1vw, 26px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+}
+
+.surgery-hero-extra > p {
+  margin: 0;
+
+  color: #627d92;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ===================================
+   LEFT FEATURES
+=================================== */
+
+.surgery-hero-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 27px;
+}
+
+.surgery-hero-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.surgery-highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  background: #e4f7f9;
+  border: 1px solid #c9ebef;
+  border-radius: 11px;
+
+  color: #009eaa;
+}
+
+.surgery-highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 2px;
+}
+
+.surgery-highlight-content strong {
+  color: #123a5c;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.surgery-highlight-content span {
+  color: #668096;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* ===================================
+   DOCTOR IMAGE
+=================================== */
+
+.surgery-doctors-visual {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.surgery-doctor-glow {
+  position: absolute;
+  z-index: 0;
+
+  width: 80%;
+  height: 75%;
+
+  bottom: 0;
+  left: 10%;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 185, 200, 0.12),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.surgery-doctors-image {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ===================================
+   RIGHT ENQUIRY CARD
+=================================== */
+
+.surgery-hero-right {
+  min-width: 0;
+  width: 100%;
+  scroll-margin-top: 100px;
+}
+
+.surgery-form-card {
+  width: 100%;
+  padding: clamp(23px, 2.5vw, 36px);
+
+  background: #ffffff;
+  border: 1px solid #e4edf3;
+  border-radius: 17px;
+
+  box-shadow:
+    0 8px 35px rgba(10, 55, 84, 0.09);
+}
+
+/* ===================================
+   FORM HEADING
+=================================== */
+
+.surgery-form-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  color: #009fac;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.surgery-eyebrow-line {
+  width: 25px;
+  height: 2px;
+  background: #00afbc;
+}
+
+.surgery-form-heading {
+  margin: 0;
+
+  color: #0d3357;
+  font-size: clamp(25px, 2.6vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.22;
+}
+
+.surgery-form-heading span {
+  display: inline;
+}
+
+.surgery-form-description {
+  margin: 12px 0 23px;
+
+  color: #6b8297;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ===================================
+   FORM GRID
+=================================== */
+
+.surgery-enquiry-form {
+  width: 100%;
+}
+
+.surgery-form-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 17px 14px;
+}
+
+.surgery-form-group {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.surgery-full-width {
+  grid-column: 1 / -1;
+}
+
+/* ===================================
+   LABELS
+=================================== */
+
+.surgery-form-group > label,
+.surgery-radio-group legend {
+  color: #35516a;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.surgery-form-group > label span,
+.required-star {
+  color: #e18e16;
+}
+
+/* ===================================
+   TEXT INPUTS / SELECTS
+=================================== */
+
+.surgery-form-group > input:not([type="radio"]),
+.surgery-form-group > select,
+.surgery-form-group > textarea {
+  width: 100%;
+  min-width: 0;
+
+  padding: 13px 14px;
+  border: 1px solid #c8dce9;
+  border-radius: 9px;
+
+  background: #f8fbfd;
+  color: #1d405d;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.surgery-form-group > input:not([type="radio"]),
+.surgery-form-group > select {
+  height: 48px;
+}
+
+.surgery-form-group > textarea {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.surgery-form-group input::placeholder,
+.surgery-form-group textarea::placeholder {
+  color: #94a9bc;
+}
+
+.surgery-form-group > input:focus,
+.surgery-form-group > select:focus,
+.surgery-form-group > textarea:focus {
+  background: #ffffff;
+  border-color: #00a8b5;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 168, 181, 0.11);
+}
+
+.surgery-form-group select {
+  cursor: pointer;
+}
+
+/* ===================================
+   RADIO BUTTON FIELDS
+=================================== */
+
+.surgery-radio-group {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.surgery-radio-group legend {
+  padding: 0;
+  margin-bottom: 9px;
+}
+
+.surgery-radio-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.surgery-radio-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 43px;
+  padding: 10px 15px;
+
+  background: #f8fbfd;
+  border: 1px solid #d0e1eb;
+  border-radius: 9px;
+
+  color: #3b5368;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.3;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.surgery-radio-option input[type="radio"] {
+  appearance: auto;
+  display: inline-block;
+
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  box-shadow: none;
+
+  accent-color: #00a8b5;
+  cursor: pointer;
+}
+
+.surgery-radio-option span {
+  color: inherit;
+}
+
+.surgery-radio-option.active,
+.surgery-radio-option:has(input:checked) {
+  border-color: #00a8b5;
+  background: #e8f8fa;
+  color: #007b89;
+}
+
+.surgery-radio-option:hover {
+  border-color: #00a8b5;
+}
+
+.surgery-radio-option:focus-within {
+  outline: 2px solid #009eac;
+  outline-offset: 2px;
+}
+
+/* ===================================
+   DONOR + DIALYSIS ON SAME ROW
+=================================== */
+
+.surgery-medical-choice-row {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+  gap: 14px;
+
+  width: 100%;
+}
+
+.surgery-medical-choice-row .surgery-radio-group {
+  width: 100%;
+  min-width: 0;
+}
+
+.surgery-medical-choice-row .surgery-radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+
+/* ===================================
+   FILE UPLOAD
+=================================== */
+
+.medical-report-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  padding: 15px;
+
+  color: #009ea9;
+  background: #f4fbfd;
+
+  border: 2px dashed #b6dce5;
+  border-radius: 10px;
+}
+
+.medical-report-upload input[type="file"] {
+  width: 100%;
+  padding: 10px;
+
+  background: #ffffff;
+  border: 1px solid #d4e5eb;
+  border-radius: 7px;
+
+  color: #24455d;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.medical-report-upload small {
+  color: #708598;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.medical-report-file-names {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.medical-file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  color: #24506b;
+  background: #edf8fa;
+  border: 1px solid #d7ebef;
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+.medical-file-item span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.medical-file-item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  background: white;
+  color: #b44343;
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+/* ===================================
+   CONSENT
+=================================== */
+
+.surgery-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-top: 20px;
+
+  color: #627d92;
+  font-size: 11px;
+  line-height: 1.65;
+  cursor: pointer;
+}
+
+.surgery-consent input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+
+  margin: 2px 0 0;
+  accent-color: #009fac;
+}
+
+.surgery-consent a {
+  color: #087ba0;
+  font-weight: 650;
+  text-decoration: underline;
+}
+
+/* ===================================
+   FORM STATUS
+=================================== */
+
+.surgery-form-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-top: 15px;
+  padding: 12px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.surgery-form-status svg {
+  flex-shrink: 0;
+}
+
+.surgery-form-status.success {
+  background: #e8f8ef;
+  color: #247447;
+}
+
+.surgery-form-status.error {
+  background: #fff0ef;
+  color: #b3423c;
+}
+
+/* ===================================
+   SUBMIT BUTTON
+=================================== */
+
+.surgery-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 49px;
+  margin-top: 19px;
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: linear-gradient(
+    110deg,
+    #00b8c6,
+    #008c99
+  );
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.surgery-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 20px rgba(0, 154, 170, 0.19);
+}
+
+.surgery-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 1100px) {
+  .surgery-hero-container {
+    gap: 25px;
+  }
+
+  .surgery-form-card {
+    padding: 25px 22px;
+  }
+
+  .surgery-hero-title {
+    font-size: clamp(31px, 3.5vw, 43px);
+  }
+
+  .surgery-hero-highlights {
+    gap: 16px;
+  }
+
+  .surgery-radio-option {
+    padding: 9px 11px;
+  }
+}
+
+/* ===================================
+   SMALL TABLET
+=================================== */
+
+@media (max-width: 850px) {
+  .surgery-hero {
+    padding: 25px 18px 40px;
+  }
+
+  .surgery-hero-container {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .surgery-hero-left {
+    padding: 0;
+  }
+
+  .surgery-hero-extra {
+    max-width: 100%;
+  }
+
+  .surgery-doctors-visual {
+    max-width: 580px;
+    margin: 28px auto 0;
+  }
+
+  .surgery-form-card {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 600px) {
+  .surgery-hero {
+    padding: 24px 14px 35px;
+  }
+
+  .surgery-hero-container {
+    gap: 25px;
+  }
+
+  .surgery-hero-eyebrow {
+    font-size: 9px;
+    margin-bottom: 14px;
+  }
+
+  .surgery-hero-title {
+    font-size: clamp(30px, 8vw, 39px);
+    letter-spacing: -1px;
+  }
+
+  .surgery-hero-description {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .surgery-hero-extra {
+    margin-top: 25px;
+  }
+
+  .surgery-hero-extra h2 {
+    font-size: 21px;
+  }
+
+  .surgery-hero-extra > p {
+    font-size: 12px;
+  }
+
+  .surgery-hero-highlights {
+    gap: 17px;
+    margin-top: 22px;
+  }
+
+  .surgery-highlight-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .surgery-highlight-content strong {
+    font-size: 13px;
+  }
+
+  .surgery-highlight-content span {
+    font-size: 12px;
+  }
+
+  .surgery-doctors-visual {
+    margin-top: 25px;
+  }
+
+  .surgery-form-card {
+    padding: 23px 17px;
+    border-radius: 13px;
+  }
+
+  .surgery-form-heading {
+    font-size: 25px;
+  }
+
+  .surgery-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .surgery-medical-choice-row {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .surgery-radio-option {
+    min-height: 43px;
+    padding: 10px 15px;
+  }
+
+  .surgery-submit-btn {
+    width: 100%;
+  }
+}
+
+/* ===================================
+   REDUCED MOTION
+=================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .surgery-radio-option,
+  .surgery-submit-btn,
+  .surgery-form-group input,
+  .surgery-form-group select,
+  .surgery-form-group textarea {
+    transition: none;
+  }
+
+  .surgery-submit-btn:hover {
+    transform: none;
+  }
+}

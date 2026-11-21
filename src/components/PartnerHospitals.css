@@ -1,0 +1,281 @@
+
+/* ==================================
+   PARTNER HOSPITALS SECTION
+================================== */
+
+.partner-hospitals-section,
+.partner-hospitals-section * {
+  box-sizing: border-box;
+}
+
+.partner-hospitals-section {
+  width: 100%;
+  padding: 42px 24px 48px;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.partner-hospitals-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ==================================
+   HEADING
+================================== */
+
+.partner-hospitals-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.partner-hospitals-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-bottom: 9px;
+
+  color: #00a1ad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.partner-hospitals-line {
+  width: 27px;
+  height: 2px;
+  background: #00afba;
+  border-radius: 5px;
+}
+
+.partner-hospitals-heading h2 {
+  margin: 0;
+  color: #092c51;
+
+  font-size: clamp(25px, 2.4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.partner-hospitals-heading p {
+  margin: 9px auto 0;
+  max-width: 700px;
+
+  color: #637a90;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==================================
+   COUNTRY IMAGE GRID
+================================== */
+
+.partner-hospitals-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* ==================================
+   FULL IMAGE CARDS
+================================== */
+
+.partner-hospital-item {
+  position: relative;
+
+  display: block;
+  min-width: 0;
+  width: 100%;
+  height: 160px;
+
+  /* Remove internal white spacing */
+  padding: 0;
+
+  background: transparent;
+  border: 1px solid #e0e9f0;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 3px 12px rgba(9, 44, 81, 0.035);
+
+  animation: partnerHospitalReveal 0.6s ease both;
+  animation-delay: calc(var(--hospital-index) * 80ms);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.partner-hospital-item:hover {
+  transform: translateY(-5px);
+  border-color: #b4e3e8;
+  box-shadow: 0 12px 25px rgba(9, 44, 81, 0.12);
+}
+
+/* ==================================
+   IMAGE FILLS ENTIRE CARD
+================================== */
+
+.partner-hospital-item img {
+  display: block;
+
+  /* Full width and height */
+  width: 100%;
+  height: 100%;
+
+  /* Override previous image limits */
+  max-width: none;
+  max-height: none;
+
+  /* Fill entire container */
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 0;
+
+  transition: transform 0.4s ease;
+}
+
+.partner-hospital-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ==================================
+   OPTIONAL COUNTRY NAME OVERLAY
+================================== */
+
+/*
+  If you add a country name inside the card
+  with className="partner-country-name",
+  it will appear at the bottom of the image.
+*/
+
+.partner-country-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 25px 10px 12px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 25, 45, 0.8),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* ==================================
+   ENTRANCE ANIMATION
+================================== */
+
+@keyframes partnerHospitalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 1000px) {
+  .partner-hospitals-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .partner-hospital-item {
+    height: 180px;
+  }
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 600px) {
+  .partner-hospitals-section {
+    padding: 38px 15px 45px;
+  }
+
+  .partner-hospitals-heading {
+    margin-bottom: 25px;
+  }
+
+  .partner-hospitals-eyebrow {
+    font-size: 9px;
+  }
+
+  .partner-hospitals-heading h2 {
+    font-size: 26px;
+  }
+
+  .partner-hospitals-heading p {
+    font-size: 12px;
+  }
+
+  .partner-hospitals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .partner-hospital-item {
+    height: 140px;
+    padding: 0;
+    border-radius: 10px;
+  }
+
+  .partner-hospital-item img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .partner-country-name {
+    font-size: 12px;
+    padding: 20px 8px 10px;
+  }
+}
+
+/* ==================================
+   SMALL MOBILE
+================================== */
+
+@media (max-width: 380px) {
+  .partner-hospital-item {
+    height: 115px;
+  }
+}
+
+/* ==================================
+   REDUCED MOTION
+================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-hospital-item,
+  .partner-hospital-item img {
+    animation: none;
+    transition: none;
+  }
+}

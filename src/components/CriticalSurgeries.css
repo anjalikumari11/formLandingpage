@@ -1,0 +1,410 @@
+
+/* ======================================
+   CRITICAL SURGERIES SECTION
+====================================== */
+
+.critical-surgeries-section,
+.critical-surgeries-section * {
+  box-sizing: border-box;
+}
+
+.critical-surgeries-section {
+  width: 100%;
+  padding: 55px 24px 65px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fbfdff 100%
+  );
+
+  font-family: "Inter", sans-serif;
+}
+
+.critical-surgeries-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ======================================
+   SECTION HEADING
+====================================== */
+
+.critical-surgeries-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.critical-surgeries-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: #009ca9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.eyebrow-line {
+  width: 27px;
+  height: 2px;
+  background: #00aeb9;
+  border-radius: 10px;
+}
+
+.critical-surgeries-header h2 {
+  margin: 0;
+
+  color: #092c51;
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.critical-surgeries-header p {
+  margin: 10px auto 0;
+  max-width: 650px;
+
+  color: #637b91;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   SURGERY GRID
+====================================== */
+
+.critical-surgeries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* ======================================
+   SURGERY CARDS
+====================================== */
+
+.critical-surgery-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  min-width: 0;
+  min-height: 150px;
+
+  padding: 20px 17px;
+
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  animation: surgeryCardReveal 0.65s ease both;
+  animation-delay: calc(var(--card-index) * 120ms);
+}
+
+.critical-surgery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(9, 44, 81, 0.09);
+}
+
+/* KIDNEY */
+
+.critical-surgery-card.kidney {
+  background: #eff8fd;
+  border-color: #dcecf4;
+}
+
+/* LIVER */
+
+.critical-surgery-card.liver {
+  background: #eefaf9;
+  border-color: #d9f0ec;
+}
+
+/* CARDIAC */
+
+.critical-surgery-card.cardiac {
+  background: #fff3f5;
+  border-color: #f6e1e7;
+}
+
+/* ======================================
+   ILLUSTRATIONS
+====================================== */
+
+.surgery-illustration {
+  flex-shrink: 0;
+
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+}
+
+.surgery-illustration img {
+  display: block;
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+.critical-surgery-card:hover .surgery-illustration img {
+  transform: scale(1.1);
+}
+
+/* ======================================
+   CARD CONTENT
+====================================== */
+
+.critical-surgery-content {
+  flex: 1;
+  min-width: 0;
+  padding-right: 17px;
+}
+
+.critical-surgery-content h3 {
+  margin: 0 0 7px;
+
+  color: #092c51;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.critical-surgery-content p {
+  margin: 0;
+
+  color: #506a80;
+  font-size: 11.5px;
+  font-weight: 450;
+  line-height: 1.6;
+}
+
+/* ======================================
+   ARROW BUTTON
+====================================== */
+
+.surgery-card-arrow {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid rgba(9, 44, 81, 0.06);
+  border-radius: 50%;
+
+  color: #092c51;
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(9, 44, 81, 0.05);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.surgery-card-arrow:hover {
+  background: #009fa9;
+  color: #ffffff;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.surgery-card-arrow:focus-visible {
+  outline: 2px solid #009fa9;
+  outline-offset: 3px;
+}
+
+/* ======================================
+   ANIMATIONS
+====================================== */
+
+@keyframes surgeryCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================
+   TABLET
+====================================== */
+
+@media (max-width: 1100px) {
+  .critical-surgeries-grid {
+    gap: 12px;
+  }
+
+  .critical-surgery-card {
+    gap: 10px;
+    padding: 16px 12px;
+  }
+
+  .surgery-illustration {
+    width: 60px;
+    height: 60px;
+  }
+
+  .surgery-illustration img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .critical-surgery-content h3 {
+    font-size: 14px;
+  }
+
+  .critical-surgery-content p {
+    font-size: 10.5px;
+  }
+}
+
+/* ======================================
+   SMALL TABLET
+====================================== */
+
+@media (max-width: 850px) {
+  .critical-surgeries-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .critical-surgery-card {
+    min-height: 125px;
+    padding: 17px;
+    gap: 18px;
+  }
+
+  .surgery-illustration {
+    width: 70px;
+    height: 70px;
+  }
+
+  .surgery-illustration img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .critical-surgery-content h3 {
+    font-size: 16px;
+  }
+
+  .critical-surgery-content p {
+    font-size: 12px;
+  }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+  .critical-surgeries-section {
+    padding: 45px 15px 50px;
+  }
+
+  .critical-surgeries-header {
+    margin-bottom: 25px;
+  }
+
+  .critical-surgeries-eyebrow {
+    font-size: 9px;
+  }
+
+  .critical-surgeries-header h2 {
+    font-size: 26px;
+  }
+
+  .critical-surgeries-header p {
+    font-size: 12px;
+  }
+
+  .critical-surgery-card {
+    min-height: 125px;
+    padding: 15px 13px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .surgery-illustration {
+    width: 60px;
+    height: 60px;
+  }
+
+  .surgery-illustration img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .critical-surgery-content {
+    padding-right: 25px;
+  }
+
+  .critical-surgery-content h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .critical-surgery-content p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .surgery-card-arrow {
+    width: 29px;
+    height: 29px;
+    right: 10px;
+  }
+}
+
+/* ======================================
+   REDUCED MOTION
+====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .critical-surgery-card {
+    animation: none;
+    transition: none;
+  }
+
+  .surgery-illustration img,
+  .surgery-card-arrow {
+    transition: none;
+  }
+}
